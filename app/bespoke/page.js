@@ -2,12 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Coffee, Pencil, Scissors, Gift } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
-import { aiImage } from "@/lib/aiImage";
+import { localSrc } from "@/lib/images";
 
-const BESPOKE_IMG = aiImage(
-  "close-up of African seamstress hands beading wedding gown silk fabric in atelier workshop, fashion design studio, warm natural light, editorial photography",
-  { w: 900, h: 1100, seed: 32 }
-);
+const BESPOKE_IMG = localSrc("bespokeDetail");
 
 export const metadata = {
   title: "Bespoke",

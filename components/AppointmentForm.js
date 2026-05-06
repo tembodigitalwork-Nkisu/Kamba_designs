@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MessageCircle } from "lucide-react";
+import { WhatsAppIcon } from "./icons/BrandIcons";
 
 const interests = [
   "Bridal gown — bespoke",
@@ -80,7 +80,7 @@ export default function AppointmentForm() {
           rel="noreferrer"
           className="inline-flex items-center gap-2 bg-[#25D366] text-ivory-50 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium hover:opacity-90 transition"
         >
-          Send via WhatsApp <MessageCircle className="h-4 w-4" />
+          Send via WhatsApp <WhatsAppIcon className="h-4 w-4" />
         </a>
       </div>
     </form>

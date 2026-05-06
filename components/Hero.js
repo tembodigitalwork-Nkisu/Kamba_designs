@@ -1,12 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { aiImage } from "@/lib/aiImage";
+import { localSrc } from "@/lib/images";
 
-const HERO_IMAGE = aiImage(
-  "elegant African bride in flowing ivory silk wedding gown, full body editorial fashion photography, soft natural light, hand-stitched detailing, cinematic, high fashion",
-  { w: 1400, h: 1750, seed: 11 }
-);
+const HERO_IMAGE = localSrc("hero");
 
 export default function Hero() {
   return (

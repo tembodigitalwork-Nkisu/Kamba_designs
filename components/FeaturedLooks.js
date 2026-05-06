@@ -1,27 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { aiImage } from "@/lib/aiImage";
+import { localSrc } from "@/lib/images";
 
 const looks = [
-  {
-    name: "Pearl",
-    silhouette: "Slip · Silk satin",
-    category: "Bridal",
-    img: aiImage("African bride in minimalist ivory silk satin slip wedding dress, full body editorial fashion photography, soft natural light, clean studio backdrop", { w: 900, h: 1200, seed: 21 }),
-  },
-  {
-    name: "Iris",
-    silhouette: "Mermaid · Hand-cut lace",
-    category: "Bridal",
-    img: aiImage("African bride in white lace mermaid wedding gown with intricate hand-cut lace details, fashion photography, soft natural light, full body, elegant", { w: 900, h: 1200, seed: 22 }),
-  },
-  {
-    name: "Tasila",
-    silhouette: "Kitenge formal · Custom",
-    category: "Occasion",
-    img: aiImage("African woman in elegant chitenge formal dress, vibrant traditional African wax print fabric, structured tailoring, fashion editorial, full body portrait, Lusaka Zambia style", { w: 900, h: 1200, seed: 23 }),
-  },
+  { name: "Pearl",  silhouette: "Slip · Silk satin",       category: "Bridal",   img: localSrc("bridalPearl") },
+  { name: "Iris",   silhouette: "Mermaid · Hand-cut lace", category: "Bridal",   img: localSrc("bridalIris") },
+  { name: "Tasila", silhouette: "Kitenge formal · Custom", category: "Occasion", img: localSrc("occasionTasila") },
 ];
 
 export default function FeaturedLooks() {

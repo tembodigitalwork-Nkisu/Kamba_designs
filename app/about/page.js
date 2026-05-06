@@ -2,12 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Award } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
-import { aiImage } from "@/lib/aiImage";
+import { localSrc } from "@/lib/images";
 
-const FOUNDER_IMG = aiImage(
-  "elegant African woman fashion designer in her atelier studio surrounded by fabric and dressforms, professional portrait, warm natural light, editorial fashion photography, Lusaka",
-  { w: 900, h: 1150, seed: 71 }
-);
+const FOUNDER_IMG = localSrc("founder");
 
 export const metadata = {
   title: "About / The House",

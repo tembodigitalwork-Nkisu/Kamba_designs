@@ -1,4 +1,5 @@
-import { MapPin, Phone, MessageCircle, Instagram, Facebook, Clock } from "lucide-react";
+import { MapPin, Phone, Clock } from "lucide-react";
+import { InstagramIcon, FacebookIcon, WhatsAppIcon } from "@/components/icons/BrandIcons";
 import SectionHeader from "@/components/SectionHeader";
 import LazyMap from "@/components/LazyMap";
 
@@ -10,11 +11,11 @@ export const metadata = {
 
 const channels = [
   { label: "Atelier",            body: "Woodlands, Lusaka\nBy appointment", icon: MapPin },
-  { label: "Phone · primary",    body: "+260 97 203 5672", icon: Phone, href: "tel:+260972035672" },
-  { label: "WhatsApp",           body: "+260 97 203 5672", icon: MessageCircle, href: "https://wa.me/260972035672" },
-  { label: "Instagram · Bridal", body: "@kamba_bridal", icon: Instagram, href: "https://instagram.com/kamba_bridal" },
-  { label: "Instagram · House",  body: "@kamba_designs", icon: Instagram, href: "https://instagram.com/kamba_designs" },
-  { label: "Facebook",           body: "/KambaDesigns", icon: Facebook, href: "https://facebook.com/KambaDesigns" },
+  { label: "Phone · primary",    body: "+260 97 203 5672", icon: Phone,           href: "tel:+260972035672" },
+  { label: "WhatsApp",           body: "+260 97 203 5672", icon: WhatsAppIcon,    href: "https://wa.me/260972035672" },
+  { label: "Instagram · Bridal", body: "@kamba_bridal",    icon: InstagramIcon,   href: "https://instagram.com/kamba_bridal" },
+  { label: "Instagram · House",  body: "@kamba_designs",   icon: InstagramIcon,   href: "https://instagram.com/kamba_designs" },
+  { label: "Facebook",           body: "/KambaDesigns",    icon: FacebookIcon,    href: "https://facebook.com/KambaDesigns" },
 ];
 
 export default function ContactPage() {

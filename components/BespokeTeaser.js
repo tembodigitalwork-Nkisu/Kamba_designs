@@ -1,12 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { aiImage } from "@/lib/aiImage";
+import { localSrc } from "@/lib/images";
 
-const TEASER_IMG = aiImage(
-  "close-up of hands sewing white wedding gown silk fabric in atelier workshop, fashion design studio, beading and lace, warm natural light, editorial photography",
-  { w: 1100, h: 1300, seed: 31 }
-);
+const TEASER_IMG = localSrc("bespokeTeaser");
 
 export default function BespokeTeaser() {
   return (

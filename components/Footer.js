@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Instagram, Facebook, MessageCircle, MapPin, Phone } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
+import { InstagramIcon, FacebookIcon, WhatsAppIcon } from "./icons/BrandIcons";
 import Logo from "./Logo";
 
 const sections = {
@@ -17,10 +18,10 @@ const sections = {
 };
 
 const socials = [
-  { label: "Instagram · Bridal", handle: "@kamba_bridal", href: "https://instagram.com/kamba_bridal", icon: Instagram },
-  { label: "Instagram · House",  handle: "@kamba_designs", href: "https://instagram.com/kamba_designs", icon: Instagram },
-  { label: "Facebook",           handle: "/KambaDesigns",  href: "https://facebook.com/KambaDesigns",  icon: Facebook },
-  { label: "WhatsApp",           handle: "+260 97 203 5672", href: "https://wa.me/260972035672", icon: MessageCircle },
+  { label: "Instagram · Bridal", handle: "@kamba_bridal",     href: "https://instagram.com/kamba_bridal",  icon: InstagramIcon },
+  { label: "Instagram · House",  handle: "@kamba_designs",    href: "https://instagram.com/kamba_designs", icon: InstagramIcon },
+  { label: "Facebook",           handle: "/KambaDesigns",     href: "https://facebook.com/KambaDesigns",   icon: FacebookIcon },
+  { label: "WhatsApp",           handle: "+260 97 203 5672",  href: "https://wa.me/260972035672",          icon: WhatsAppIcon },
 ];
 
 export default function Footer() {
