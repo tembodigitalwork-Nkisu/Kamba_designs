@@ -28,7 +28,7 @@ export default function Philosophy() {
             A fashion house. <span className="italic">Not a label.</span>
           </p>
           <p className="mt-6 text-ink-700 leading-relaxed">
-            Kamba is led by Chikondi M., founder, CEO, and lead designer.
+            Kamba is led by Chikondi Mwanza, founder, CEO, and lead designer.
             The work is bridal first, occasion-luxe second — and unhurried by design.
           </p>
         </div>

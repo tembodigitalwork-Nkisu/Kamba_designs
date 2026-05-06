@@ -18,7 +18,7 @@ export default function Hero() {
               <span className="italic font-normal text-ink-700">— and the ones after.</span>
             </h1>
             <p className="mt-7 max-w-md text-ink-700 leading-relaxed animate-fadeUp">
-              Kamba is a Lusaka fashion house led by Chikondi M. — bridal gowns,
+              Kamba is a Lusaka fashion house led by Chikondi Mwanza — bridal gowns,
               bridal-shower outfits, kitenge formal pieces, and occasion looks,
               all hand-tailored in Woodlands.
             </p>

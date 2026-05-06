@@ -24,7 +24,7 @@ export const metadata = {
     template: "%s — Kamba Fashion Designs",
   },
   description:
-    "Kamba Fashion Designs is a Lusaka fashion house led by Chikondi M. — bridal & occasion luxe, hand-tailored in Woodlands. Custom gowns, kitenge formal pieces, event styling.",
+    "Kamba Fashion Designs is a Lusaka fashion house led by Chikondi Mwanza — bridal & occasion luxe, hand-tailored in Woodlands. Custom gowns, kitenge formal pieces, event styling.",
   keywords: [
     "Kamba Fashion Designs",
     "bridal designer Lusaka",
@@ -35,7 +35,7 @@ export const metadata = {
   ],
   openGraph: {
     title: "Kamba Fashion Designs — Bridal & Occasion Luxe",
-    description: "Hand-tailored bridal gowns and occasion looks, made in Lusaka. Led by Chikondi M.",
+    description: "Hand-tailored bridal gowns and occasion looks, made in Lusaka. Led by Chikondi Mwanza",
     type: "website",
     locale: "en_ZM",
   },
@@ -82,7 +82,7 @@ function BusinessSchema() {
       addressRegion: "Woodlands",
       addressCountry: "ZM",
     },
-    founder: { "@type": "Person", name: "Chikondi M." },
+    founder: { "@type": "Person", name: "Chikondi Mwanza" },
     sameAs: [
       "https://instagram.com/kamba_bridal",
       "https://instagram.com/kamba_designs",

@@ -10,7 +10,7 @@ export const metadata = {
 };
 
 const channels = [
-  { label: "Atelier",            body: "Woodlands, Lusaka\nBy appointment", icon: MapPin },
+  { label: "Atelier",            body: "Njase Close #4, Woodlands ext.\nLusaka · By appointment", icon: MapPin },
   { label: "Phone · primary",    body: "+260 97 203 5672", icon: Phone,           href: "tel:+260972035672" },
   { label: "WhatsApp",           body: "+260 97 203 5672", icon: WhatsAppIcon,    href: "https://wa.me/260972035672" },
   { label: "Instagram · Bridal", body: "@kamba_bridal",    icon: InstagramIcon,   href: "https://instagram.com/kamba_bridal" },

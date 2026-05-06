@@ -9,7 +9,7 @@ const FOUNDER_IMG = localSrc("founder");
 export const metadata = {
   title: "About / The House",
   description:
-    "Kamba Fashion Designs is a Lusaka-based fashion house led by Chikondi M. — bridal and occasion luxe, hand-tailored in Woodlands.",
+    "Kamba Fashion Designs is a Lusaka-based fashion house led by Chikondi Mwanza — bridal and occasion luxe, hand-tailored in Woodlands.",
 };
 
 const awards = [
@@ -25,7 +25,7 @@ export default function AboutPage() {
           <SectionHeader
             eyebrow="The House"
             title={<>Bridal &amp; occasion luxe, <span className="italic">made in Lusaka.</span></>}
-            intro="Kamba Fashion Designs is a small fashion house in Woodlands, Lusaka — led by founder, CEO and lead designer Chikondi M. We design and tailor bridal gowns, bridal-shower outfits, kitenge formal pieces, and occasion looks for clients across Zambia and beyond."
+            intro="Kamba Fashion Designs is a small fashion house in Woodlands, Lusaka — led by founder, CEO and lead designer Chikondi Mwanza. We design and tailor bridal gowns, bridal-shower outfits, kitenge formal pieces, and occasion looks for clients across Zambia and beyond."
           />
         </div>
       </section>
@@ -42,12 +42,12 @@ export default function AboutPage() {
                 className="object-cover"
               />
             </div>
-            <p className="mt-4 editorial-eyebrow text-ink-500">— Chikondi M., founder &amp; lead designer.</p>
+            <p className="mt-4 editorial-eyebrow text-ink-500">— Chikondi Mwanza, founder &amp; lead designer.</p>
           </div>
           <div className="lg:col-span-7 space-y-6 text-ink-700 leading-relaxed">
             <p className="text-lg">
               Kamba grew out of a tailoring practice that began with a single bridal commission and
-              never quite stopped. The brand is led by Chikondi M., who acts as both CEO and lead
+              never quite stopped. The brand is led by Chikondi Mwanza, who acts as both CEO and lead
               designer, with a small team of cutters and beaders working out of the Woodlands atelier.
             </p>
             <p>
@@ -64,8 +64,8 @@ export default function AboutPage() {
 
             <div className="mt-12 grid sm:grid-cols-2 gap-px bg-ivory-200 border border-ivory-200">
               {[
-                ["Founded by", "Chikondi M."],
-                ["Located in", "Woodlands, Lusaka"],
+                ["Founded by", "Chikondi Mwanza"],
+                ["Located in", "Njase Close #4, Woodlands ext., Lusaka"],
                 ["Specialism", "Bridal &amp; occasion luxe"],
                 ["Made in", "Zambia, by hand"],
               ].map(([k, v]) => (
@@ -116,7 +116,7 @@ export default function AboutPage() {
             "We don't sell off the rack. <br />
             <span className="italic">We tailor for the person, the day, the photograph that survives it."</span>
           </p>
-          <p className="mt-8 editorial-eyebrow text-gold-300">— Chikondi M. · Founder</p>
+          <p className="mt-8 editorial-eyebrow text-gold-300">— Chikondi Mwanza · Founder</p>
 
           <Link
             href="/appointments"

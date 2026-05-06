@@ -32,7 +32,7 @@ export default function Footer() {
           <Logo size="md" />
           <p className="mt-6 max-w-sm text-sm text-ink-700 leading-relaxed">
             Bridal &amp; occasion luxe, hand-tailored in Lusaka.
-            Custom gowns, kitenge formal pieces, and event styling — by Chikondi M. and the Kamba house team.
+            Custom gowns, kitenge formal pieces, and event styling — by Chikondi Mwanza and the Kamba house team.
           </p>
           <ul className="mt-6 space-y-2.5">
             {socials.map(({ label, handle, href, icon: Icon }) => (
@@ -75,7 +75,7 @@ export default function Footer() {
           <h4 className="editorial-eyebrow text-wine-700">Atelier</h4>
           <p className="mt-5 text-sm text-ink-950 not-italic">
             <MapPin className="inline h-3.5 w-3.5 mr-1 -translate-y-0.5" />
-            Woodlands, Lusaka<br />
+            Woodlands ext., Njase Close #4<br />Lusaka<br />
             By appointment
           </p>
           <p className="mt-3 text-sm text-ink-950">
