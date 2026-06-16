@@ -11,9 +11,9 @@ const looks = [
 
 export default function FeaturedLooks() {
   return (
-    <section className="relative py-20 sm:py-28 bg-ivory-100">
+    <section className="relative py-14 sm:py-28 bg-ivory-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-8 sm:mb-12">
           <div>
             <p className="editorial-eyebrow text-wine-700">The Collection</p>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl text-ink-950 font-light leading-[1.05]">

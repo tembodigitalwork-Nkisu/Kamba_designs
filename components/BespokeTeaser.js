@@ -7,10 +7,10 @@ const TEASER_IMG = localSrc("bespokeTeaser");
 
 export default function BespokeTeaser() {
   return (
-    <section className="relative py-20 sm:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-center">
+    <section className="relative py-14 sm:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-8 sm:gap-12 items-center">
         <div className="lg:col-span-6 order-2 lg:order-1">
-          <div className="relative aspect-[5/6]">
+          <div className="relative aspect-[4/3] sm:aspect-[5/6]">
             <Image
               src={TEASER_IMG}
               alt="Hands sewing a wedding gown in the Kamba atelier"
@@ -31,7 +31,7 @@ export default function BespokeTeaser() {
             and leaves the atelier as the only one in the world.
           </p>
 
-          <ol className="mt-10 space-y-5">
+          <ol className="mt-8 space-y-4 sm:space-y-5">
             {[
               ["01", "Consultation", "A 90-minute session. We sketch, you talk. No commitment."],
               ["02", "First fabric", "Toile and fittings. The dress takes shape on you, not on a stand."],

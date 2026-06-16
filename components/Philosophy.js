@@ -20,7 +20,7 @@ const pillars = [
 
 export default function Philosophy() {
   return (
-    <section className="relative py-20 sm:py-28">
+    <section className="relative py-14 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center max-w-2xl mx-auto">
           <p className="editorial-eyebrow text-wine-700">The House</p>
@@ -33,7 +33,7 @@ export default function Philosophy() {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-px bg-ivory-200">
+        <div className="mt-10 sm:mt-16 grid grid-cols-1 md:grid-cols-3 gap-px bg-ivory-200">
           {pillars.map(({ title, desc, icon: Icon }) => (
             <article key={title} className="bg-ivory-50 p-8 sm:p-10">
               <Icon className="h-6 w-6 text-wine-700" strokeWidth={1.4} />

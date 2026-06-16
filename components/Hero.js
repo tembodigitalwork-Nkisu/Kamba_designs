@@ -8,8 +8,8 @@ const HERO_IMAGE = localSrc("hero");
 export default function Hero() {
   return (
     <section className="relative">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-10 pb-16 sm:pt-14 sm:pb-24">
-        <div className="grid lg:grid-cols-12 gap-10 items-end">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-6 pb-12 sm:pt-14 sm:pb-24">
+        <div className="grid lg:grid-cols-12 gap-8 sm:gap-10 items-end">
           <div className="lg:col-span-5 order-2 lg:order-1">
             <p className="editorial-eyebrow text-wine-700 animate-fadeUp">Bridal &amp; Occasion Luxe · Lusaka</p>
             <h1 className="mt-6 font-display font-light text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[0.95] text-ink-950 animate-fadeUp">
@@ -37,7 +37,7 @@ export default function Hero() {
               </Link>
             </div>
 
-            <dl className="mt-14 grid grid-cols-3 gap-6 max-w-md border-t border-ivory-200 pt-8">
+            <dl className="mt-10 sm:mt-14 grid grid-cols-3 gap-6 max-w-md border-t border-ivory-200 pt-6 sm:pt-8">
               {[
                 ["10+ yrs", "In practice"],
                 ["13K+", "Followers across IG & FB"],

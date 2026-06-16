@@ -3,9 +3,9 @@ import { Calendar } from "lucide-react";
 
 export default function AppointmentsCTA() {
   return (
-    <section className="relative py-20 sm:py-28">
+    <section className="relative py-14 sm:py-28">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <div className="bg-ink-950 text-ivory-50 p-10 sm:p-16 relative overflow-hidden">
+        <div className="bg-ink-950 text-ivory-50 p-8 sm:p-16 relative overflow-hidden">
           <div aria-hidden="true" className="absolute -top-10 -right-10 h-48 w-48 rounded-full bg-wine-700/30 blur-3xl" />
           <div className="relative">
             <Calendar className="h-7 w-7 text-gold-500" strokeWidth={1.4} />
