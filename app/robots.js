@@ -1,5 +1,4 @@
-// Update SITE_URL once the production domain is wired up.
-const SITE_URL = "https://kamba-fashion.example";
+import { SITE_URL } from "@/lib/site";
 
 export default function robots() {
   return {

@@ -32,7 +32,7 @@ export default function Footer() {
           <Logo size="md" />
           <p className="mt-6 max-w-sm text-sm text-ink-700 leading-relaxed">
             Bridal &amp; occasion luxe, hand-tailored in Lusaka.
-            Custom gowns, kitenge formal pieces, and event styling — by Chikondi Mwanza and the Kamba house team.
+            Custom gowns, kitenge formal pieces, and event styling, by Chikondi Mwanza and the Kamba house team.
           </p>
           <ul className="mt-6 space-y-2.5">
             {socials.map(({ label, handle, href, icon: Icon }) => (
@@ -88,7 +88,7 @@ export default function Footer() {
       <div className="border-t border-ivory-200">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-5 flex flex-col sm:flex-row justify-between gap-2 text-xs text-ink-500">
           <p>© {new Date().getFullYear()} Kamba Fashion Designs. All rights reserved.</p>
-          <p className="tracking-[0.2em] uppercase">Bridal &amp; occasion luxe — made in Zambia</p>
+          <p className="tracking-[0.2em] uppercase">Bridal &amp; occasion luxe, made in Zambia</p>
         </div>
       </div>
     </footer>

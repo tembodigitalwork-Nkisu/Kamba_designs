@@ -1,5 +1,5 @@
 // Official brand glyphs for the social channels Kamba uses. Paths sourced
-// from Simple Icons (https://simpleicons.org) — the standard set of brand
+// from Simple Icons (https://simpleicons.org), the standard set of brand
 // SVGs used by most marketing kits. All accept className like lucide.
 
 export function InstagramIcon({ className = "h-4 w-4" }) {

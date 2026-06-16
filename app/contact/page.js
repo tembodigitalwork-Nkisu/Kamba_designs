@@ -6,7 +6,7 @@ import LazyMap from "@/components/LazyMap";
 export const metadata = {
   title: "Contact / Find Us",
   description:
-    "Visit Kamba Fashion Designs in Woodlands, Lusaka — by appointment. WhatsApp +260 97 203 5672. Instagram @kamba_bridal & @kamba_designs. Facebook /KambaDesigns.",
+    "Visit Kamba Fashion Designs in Woodlands, Lusaka, by appointment. WhatsApp +260 97 203 5672. Instagram @kamba_bridal & @kamba_designs. Facebook /KambaDesigns.",
 };
 
 const channels = [
@@ -24,9 +24,10 @@ export default function ContactPage() {
       <section className="relative py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <SectionHeader
+            as="h1"
             eyebrow="Contact"
-            title={<>Find us — <span className="italic">in Woodlands.</span></>}
-            intro="The atelier is by appointment. WhatsApp is the fastest route — every order conversation runs through one number."
+            title={<>Find us <span className="italic">in Woodlands.</span></>}
+            intro="The atelier is by appointment. WhatsApp is the fastest route, every order conversation runs through one number."
           />
         </div>
       </section>
@@ -77,7 +78,7 @@ export default function ContactPage() {
                 <h3 className="editorial-eyebrow text-wine-700">Atelier hours</h3>
               </div>
               <ul className="mt-5 text-sm text-ink-950 space-y-2">
-                <li className="flex justify-between border-b border-ivory-200 pb-2"><span>Monday – Friday</span><span>By appointment</span></li>
+                <li className="flex justify-between border-b border-ivory-200 pb-2"><span>Monday to Friday</span><span>By appointment</span></li>
                 <li className="flex justify-between border-b border-ivory-200 pb-2"><span>Saturday</span><span>By appointment</span></li>
                 <li className="flex justify-between border-b border-ivory-200 pb-2 text-ink-500"><span>Sunday</span><span>Closed</span></li>
               </ul>

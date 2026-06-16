@@ -8,7 +8,7 @@ const MAP_SRC =
 
 // Lazy-load the Google Maps iframe behind a click. The atelier page is
 // long; most visitors only want the address text. Loading ~500 KB of map
-// JS for everyone is wasteful — we hold it back behind a single tap.
+// JS for everyone is wasteful, so we hold it back behind a single tap.
 export default function LazyMap() {
   const [loaded, setLoaded] = useState(false);
 
@@ -16,7 +16,7 @@ export default function LazyMap() {
     return (
       <iframe
         src={MAP_SRC}
-        title="Kamba Fashion Designs — Lusaka, Zambia"
+        title="Kamba Fashion Designs, Lusaka, Zambia"
         className="absolute inset-0 w-full h-full"
         style={{ border: 0 }}
         loading="lazy"

@@ -34,7 +34,7 @@ export default function FeaturedLooks() {
               <div className="relative aspect-[3/4] overflow-hidden bg-ivory-200">
                 <Image
                   src={l.img}
-                  alt={`${l.name} — ${l.silhouette}`}
+                  alt={`${l.name}, ${l.silhouette}`}
                   fill
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   className="object-cover transition duration-700 group-hover:scale-[1.02]"

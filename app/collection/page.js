@@ -7,7 +7,7 @@ import { localSrc } from "@/lib/images";
 export const metadata = {
   title: "Collection",
   description:
-    "Kamba Fashion Designs — bridal gowns and occasion looks. Hand-tailored in Woodlands, Lusaka. Each piece made to measure.",
+    "Bridal gowns and occasion looks from Kamba Fashion Designs. Hand-tailored in Woodlands, Lusaka. Each piece made to measure.",
 };
 
 const bridalLooks = [
@@ -32,9 +32,10 @@ export default function CollectionPage() {
       <section className="relative py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <SectionHeader
+            as="h1"
             eyebrow="The Collection · 2026"
             title={<>Bridal &amp; <span className="italic">occasion luxe.</span></>}
-            intro="Two lines, one workroom. Bridal — for the day. Occasion — for everything around it. Pricing on request; every piece is made to your measurements."
+            intro="Two lines, one workroom. Bridal, for the day. Occasion, for everything around it. Pricing on request, every piece is made to your measurements."
           />
         </div>
       </section>
@@ -81,7 +82,7 @@ function LookGrid({ id, eyebrow, title, looks }) {
               <div className="relative aspect-[3/4] overflow-hidden bg-ivory-100">
                 <Image
                   src={l.img}
-                  alt={`${l.name} — ${l.silhouette}`}
+                  alt={`${l.name}, ${l.silhouette}`}
                   fill
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   className="object-cover transition duration-700 group-hover:scale-[1.02]"

@@ -9,7 +9,7 @@ const BESPOKE_IMG = localSrc("bespokeDetail");
 export const metadata = {
   title: "Bespoke",
   description:
-    "How a bespoke Kamba piece is made — from first conversation to final stitch. Bridal gowns and occasion looks, hand-tailored in Lusaka. Starting prices from K1,500.",
+    "How a bespoke Kamba piece is made, from first conversation to final stitch. Bridal gowns and occasion looks, hand-tailored in Lusaka. Starting prices from K1,500.",
 };
 
 const steps = [
@@ -18,7 +18,7 @@ const steps = [
     name: "The conversation",
     duration: "By appointment · K300 consultation",
     blurb:
-      "Ninety minutes in our Woodlands atelier or on WhatsApp video. We sketch, you talk — about the day, the dress, the things you'd like to feel that morning. K300 secures your slot; waived if you commit to a piece on the day.",
+      "Ninety minutes in our Woodlands atelier or on WhatsApp video. We sketch, you talk about the day, the dress, the things you'd like to feel that morning. K300 secures your slot, waived if you commit to a piece on the day.",
     icon: Coffee,
   },
   {
@@ -26,15 +26,15 @@ const steps = [
     name: "The drawing",
     duration: "After 60% deposit",
     blurb:
-      "Once you've chosen, a 60% deposit unlocks the work. We sketch by hand and source the fabrics — silk satin, lace, kitenge, organza. Materials are always supplied by the atelier; that's how we keep quality consistent.",
+      "Once you've chosen, a 60% deposit unlocks the work. We sketch by hand and source the fabrics: silk satin, lace, kitenge, organza. Materials are always supplied by the atelier, that's how we keep quality consistent.",
     icon: Pencil,
   },
   {
     no: "03",
     name: "The fittings",
-    duration: "Across 3 – 6 months",
+    duration: "Across 3 to 6 months",
     blurb:
-      "Two to three fittings in the atelier — toile first, final fabric next. Every seam adjusted on your body, every fall pinned in person. Final 40% balance settles before the gown leaves the workroom.",
+      "Two to three fittings in the atelier: toile first, final fabric next. Every seam adjusted on your body, every fall pinned in person. Final 40% balance settles before the gown leaves the workroom.",
     icon: Scissors,
   },
   {
@@ -42,7 +42,7 @@ const steps = [
     name: "The reveal",
     duration: "Final week",
     blurb:
-      "Hand-beading, hemming to your shoes, finishing. We bag, label, and hand the piece over — or deliver across Lusaka, with care.",
+      "Hand-beading, hemming to your shoes, finishing. We bag, label, and hand the piece over, or deliver across Lusaka, with care.",
     icon: Gift,
   },
 ];
@@ -62,9 +62,10 @@ export default function BespokePage() {
       <section className="relative py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <SectionHeader
+            as="h1"
             eyebrow="Bespoke"
-            title={<>From a sketch to <span className="italic">your</span> piece — in four steps.</>}
-            intro="Every Kamba gown is custom-made for one bride — never rented, never resold. The process is unhurried on purpose: most pieces take three to six months."
+            title={<>From a sketch to <span className="italic">your</span> piece, in four steps.</>}
+            intro="Every Kamba gown is custom-made for one bride, never rented, never resold. The process is unhurried on purpose: most pieces take three to six months."
           />
         </div>
       </section>
@@ -99,7 +100,7 @@ export default function BespokePage() {
               </h2>
             </div>
             <p className="lg:col-span-5 text-sm text-ink-700 leading-relaxed">
-              Materials included. These are <em>starting</em> figures — final
+              Materials included. These are <em>starting</em> figures. The final
               quote depends on fabric choice, beading, embroidery, and the
               complexity of the design. You'll see the full quote in writing
               before any cloth is cut.
@@ -125,7 +126,7 @@ export default function BespokePage() {
             <div className="relative aspect-[4/5]">
               <Image
                 src={BESPOKE_IMG}
-                alt=""
+                alt="Hand-beading detail on silk in the Kamba atelier"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="object-cover"
@@ -139,7 +140,7 @@ export default function BespokePage() {
             </h2>
             <dl className="mt-10 space-y-7">
               {[
-                ["Custom only", "Every gown is made for one bride. We don't hire out, rent, or resell — and we don't reuse patterns between clients."],
+                ["Custom only", "Every gown is made for one bride. We don't hire out, rent, or resell, and we don't reuse patterns between clients."],
                 ["Lead time", "Three to six months from deposit to final fitting. Express orders are possible (full upfront payment) when the calendar allows."],
                 ["Deposits & payment", "60% deposit secures your order; the 40% balance settles before the gown leaves the atelier. Express orders settle in full upfront. No refunds once the work begins."],
                 ["Materials", "We source every fabric, lining, bead, and trim. Keeps the quality consistent end-to-end."],

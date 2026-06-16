@@ -9,11 +9,11 @@ const FOUNDER_IMG = localSrc("founder");
 export const metadata = {
   title: "About / The House",
   description:
-    "Kamba Fashion Designs is a Lusaka-based fashion house led by Chikondi Mwanza — bridal and occasion luxe, hand-tailored in Woodlands.",
+    "Kamba Fashion Designs is a Lusaka-based fashion house led by Chikondi Mwanza. Bridal and occasion luxe, hand-tailored in Woodlands.",
 };
 
 const awards = [
-  { year: "2016", body: "Designer of 2016 — Nominee", source: "Zambia Fashion Week" },
+  { year: "2016", body: "Designer of 2016 (Nominee)", source: "Zambia Fashion Week" },
   { year: "2016", body: "Best Fashion Designer of 2016", source: "Zee Creative Awards" },
 ];
 
@@ -23,9 +23,10 @@ export default function AboutPage() {
       <section className="relative py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <SectionHeader
+            as="h1"
             eyebrow="The House"
             title={<>Bridal &amp; occasion luxe, <span className="italic">made in Lusaka.</span></>}
-            intro="Kamba Fashion Designs is a small fashion house in Woodlands, Lusaka — led by founder, CEO and lead designer Chikondi Mwanza. We design and tailor bridal gowns, bridal-shower outfits, kitenge formal pieces, and occasion looks for clients across Zambia and beyond."
+            intro="Kamba Fashion Designs is a small fashion house in Woodlands, Lusaka, led by founder, CEO and lead designer Chikondi Mwanza. We design and tailor bridal gowns, bridal-shower outfits, kitenge formal pieces, and occasion looks for clients across Zambia and beyond."
           />
         </div>
       </section>
@@ -36,13 +37,13 @@ export default function AboutPage() {
             <div className="relative aspect-[4/5]">
               <Image
                 src={FOUNDER_IMG}
-                alt=""
+                alt="Chikondi Mwanza, founder and lead designer, in the Kamba atelier"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="object-cover"
               />
             </div>
-            <p className="mt-4 editorial-eyebrow text-ink-500">— Chikondi Mwanza, founder &amp; lead designer.</p>
+            <p className="mt-4 editorial-eyebrow text-ink-500">Chikondi Mwanza, founder &amp; lead designer.</p>
           </div>
           <div className="lg:col-span-7 space-y-6 text-ink-700 leading-relaxed">
             <p className="text-lg">
@@ -51,8 +52,8 @@ export default function AboutPage() {
               designer, with a small team of cutters and beaders working out of the Woodlands atelier.
             </p>
             <p>
-              The house specialises in two things. Bridal — gowns, bridal-shower outfits, party
-              looks for the people standing next to the bride. And occasion luxe — kitenge and
+              The house specialises in two things. Bridal: gowns, bridal-shower outfits, party
+              looks for the people standing next to the bride. And occasion luxe: kitenge and
               chitenge formal pieces, birthday-gala outfits, event styling for the toasts and
               receptions and dance floors that come after the aisle.
             </p>
@@ -66,12 +67,12 @@ export default function AboutPage() {
               {[
                 ["Founded by", "Chikondi Mwanza"],
                 ["Located in", "Njase Close #4, Woodlands ext., Lusaka"],
-                ["Specialism", "Bridal &amp; occasion luxe"],
+                ["Specialism", "Bridal & occasion luxe"],
                 ["Made in", "Zambia, by hand"],
               ].map(([k, v]) => (
                 <div key={k} className="bg-ivory-50 p-6">
                   <p className="editorial-eyebrow text-wine-700">{k}</p>
-                  <p className="mt-2 font-display text-2xl text-ink-950" dangerouslySetInnerHTML={{ __html: v }} />
+                  <p className="mt-2 font-display text-2xl text-ink-950">{v}</p>
                 </div>
               ))}
             </div>
@@ -85,12 +86,12 @@ export default function AboutPage() {
             <div>
               <p className="editorial-eyebrow text-wine-700">Recognition</p>
               <h2 className="mt-3 font-display text-3xl sm:text-4xl text-ink-950 font-light leading-tight">
-                Kamba in 2016 — <span className="italic">credibility, kept.</span>
+                Kamba in 2016: <span className="italic">credibility, kept.</span>
               </h2>
             </div>
             <p className="text-sm text-ink-500 max-w-sm italic">
-              Awards from a decade ago. We mention them for context, not momentum —
-              the current work speaks for itself on Instagram.
+              Awards from a decade ago. We mention them for context, not momentum.
+              The current work speaks for itself on Instagram.
             </p>
           </div>
           <ul className="grid sm:grid-cols-2 gap-px bg-ivory-200 border border-ivory-200">
@@ -102,7 +103,7 @@ export default function AboutPage() {
                 <div>
                   <p className="editorial-eyebrow text-ink-500">{a.year}</p>
                   <p className="mt-2 font-display text-xl text-ink-950 leading-snug">{a.body}</p>
-                  <p className="mt-1 text-sm text-ink-700 italic">— {a.source}</p>
+                  <p className="mt-1 text-sm text-ink-700 italic">{a.source}</p>
                 </div>
               </li>
             ))}
@@ -116,7 +117,7 @@ export default function AboutPage() {
             "We don't sell off the rack. <br />
             <span className="italic">We tailor for the person, the day, the photograph that survives it."</span>
           </p>
-          <p className="mt-8 editorial-eyebrow text-gold-300">— Chikondi Mwanza · Founder</p>
+          <p className="mt-8 editorial-eyebrow text-gold-300">Chikondi Mwanza · Founder</p>
 
           <Link
             href="/appointments"

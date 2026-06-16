@@ -13,7 +13,7 @@ export default function BespokeTeaser() {
           <div className="relative aspect-[5/6]">
             <Image
               src={TEASER_IMG}
-              alt=""
+              alt="Hands sewing a wedding gown in the Kamba atelier"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

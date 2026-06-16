@@ -14,7 +14,7 @@ export default function AppointmentsCTA() {
             </h2>
             <p className="mt-5 max-w-lg text-ivory-100/80 leading-relaxed">
               First fittings are 90 minutes, by appointment, and on the house.
-              We don't sell from a shop floor — we make to measure, on your timeline.
+              We don't sell from a shop floor. We make to measure, on your timeline.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link

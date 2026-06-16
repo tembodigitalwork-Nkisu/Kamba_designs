@@ -4,8 +4,8 @@ import { useState } from "react";
 import { WhatsAppIcon } from "./icons/BrandIcons";
 
 const interests = [
-  "Bridal gown — bespoke",
-  "Bridal gown — collection",
+  "Bridal gown (bespoke)",
+  "Bridal gown (collection)",
   "Bridal-shower outfit",
   "Kitenge / chitenge formal",
   "Birthday / gala outfit",
@@ -13,7 +13,7 @@ const interests = [
   "Just exploring",
 ];
 
-const venues = ["In atelier — Woodlands", "WhatsApp video", "Travel fitting (advance notice)"];
+const venues = ["In atelier, Woodlands", "WhatsApp video", "Travel fitting (advance notice)"];
 
 export default function AppointmentForm() {
   const [form, setForm] = useState({
@@ -25,14 +25,15 @@ export default function AppointmentForm() {
     visitDate: "",
     notes: "",
   });
+  const [error, setError] = useState("");
 
   const update = (k) => (e) => setForm({ ...form, [k]: e.target.value });
 
-  const whatsapp = () => {
+  const whatsappUrl = () => {
     const text = [
-      `Hi Kamba — I'd like to book a consultation.`,
+      `Hi Kamba, I'd like to book a consultation.`,
       `Name: ${form.name}`,
-      `Phone: ${form.phone || "(this number)"}`,
+      `Phone: ${form.phone}`,
       `For: ${form.interest}`,
       `Format: ${form.venue}`,
       `Event date: ${form.eventDate || "not set"}`,
@@ -42,6 +43,15 @@ export default function AppointmentForm() {
       .filter(Boolean)
       .join("\n");
     return `https://wa.me/260972035672?text=${encodeURIComponent(text)}`;
+  };
+
+  const handleSend = () => {
+    if (!form.name.trim() || !form.phone.trim()) {
+      setError("Add your name and phone number first, then we can open WhatsApp.");
+      return;
+    }
+    setError("");
+    window.open(whatsappUrl(), "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -74,15 +84,17 @@ export default function AppointmentForm() {
 
       <div className="sm:col-span-2 mt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-xs text-ink-500 italic">First consultations are 90 minutes, on the house.</p>
-        <a
-          href={whatsapp()}
-          target="_blank"
-          rel="noreferrer"
+        <button
+          type="button"
+          onClick={handleSend}
           className="inline-flex items-center gap-2 bg-[#25D366] text-ivory-50 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium hover:opacity-90 transition"
         >
           Send via WhatsApp <WhatsAppIcon className="h-4 w-4" />
-        </a>
+        </button>
       </div>
+      {error && (
+        <p role="alert" className="sm:col-span-2 text-xs text-wine-700">{error}</p>
+      )}
     </form>
   );
 }

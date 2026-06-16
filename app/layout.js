@@ -2,6 +2,7 @@ import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SITE_URL } from "@/lib/site";
 
 const display = Cormorant_Garamond({
   subsets: ["latin"],
@@ -18,13 +19,13 @@ const body = Inter({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://kamba-fashion.example"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Kamba Fashion Designs — Bridal & occasion luxe, Lusaka",
-    template: "%s — Kamba Fashion Designs",
+    default: "Kamba Fashion Designs | Bridal & occasion luxe in Lusaka",
+    template: "%s | Kamba Fashion Designs",
   },
   description:
-    "Kamba Fashion Designs is a Lusaka fashion house led by Chikondi Mwanza — bridal & occasion luxe, hand-tailored in Woodlands. Custom gowns, kitenge formal pieces, event styling.",
+    "Kamba Fashion Designs is a Lusaka fashion house led by Chikondi Mwanza. Bridal & occasion luxe, hand-tailored in Woodlands. Custom gowns, kitenge formal pieces, event styling.",
   keywords: [
     "Kamba Fashion Designs",
     "bridal designer Lusaka",
@@ -34,15 +35,19 @@ export const metadata = {
     "occasion wear Lusaka",
   ],
   openGraph: {
-    title: "Kamba Fashion Designs — Bridal & Occasion Luxe",
-    description: "Hand-tailored bridal gowns and occasion looks, made in Lusaka. Led by Chikondi Mwanza",
+    title: "Kamba Fashion Designs | Bridal & Occasion Luxe",
+    description: "Hand-tailored bridal gowns and occasion looks, made in Lusaka. Led by Chikondi Mwanza.",
     type: "website",
     locale: "en_ZM",
+    url: SITE_URL,
+    siteName: "Kamba Fashion Designs",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Kamba Fashion Designs" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Kamba Fashion Designs",
-    description: "Hand-tailored bridal & occasion luxe — made in Lusaka.",
+    description: "Hand-tailored bridal & occasion luxe, made in Lusaka.",
+    images: ["/og.jpg"],
   },
 };
 
@@ -69,17 +74,18 @@ function BusinessSchema() {
   const data = {
     "@context": "https://schema.org",
     "@type": "ClothingStore",
-    "@id": "https://kamba-fashion.example",
+    "@id": SITE_URL,
     name: "Kamba Fashion Designs",
     description:
-      "Lusaka fashion house — bridal gowns, bridal-shower outfits, kitenge formal pieces, and occasion luxe. Custom-tailored, by appointment.",
-    url: "https://kamba-fashion.example",
-    image: "https://kamba-fashion.example/og.jpg",
+      "Lusaka fashion house. Bridal gowns, bridal-shower outfits, kitenge formal pieces, and occasion luxe. Custom-tailored, by appointment.",
+    url: SITE_URL,
+    image: `${SITE_URL}/og.jpg`,
     telephone: "+260972035672",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Njase Close #4, Woodlands ext.",
       addressLocality: "Lusaka",
-      addressRegion: "Woodlands",
+      addressRegion: "Lusaka Province",
       addressCountry: "ZM",
     },
     founder: { "@type": "Person", name: "Chikondi Mwanza" },

@@ -14,11 +14,11 @@ export default function Hero() {
             <p className="editorial-eyebrow text-wine-700 animate-fadeUp">Bridal &amp; Occasion Luxe · Lusaka</p>
             <h1 className="mt-6 font-display font-light text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[0.95] text-ink-950 animate-fadeUp">
               Made for the moment you{" "}
-              <span className="italic font-normal text-wine-700">say yes</span>{" "}
-              <span className="italic font-normal text-ink-700">— and the ones after.</span>
+              <span className="italic font-normal text-wine-700">say yes</span>
+              <span className="italic font-normal text-ink-700">, and the ones after.</span>
             </h1>
             <p className="mt-7 max-w-md text-ink-700 leading-relaxed animate-fadeUp">
-              Kamba is a Lusaka fashion house led by Chikondi Mwanza — bridal gowns,
+              Kamba is a Lusaka fashion house led by Chikondi Mwanza. Bridal gowns,
               bridal-shower outfits, kitenge formal pieces, and occasion looks,
               all hand-tailored in Woodlands.
             </p>
@@ -40,12 +40,12 @@ export default function Hero() {
             <dl className="mt-14 grid grid-cols-3 gap-6 max-w-md border-t border-ivory-200 pt-8">
               {[
                 ["10+ yrs", "In practice"],
-                ["13K+", "Followers across IG &amp; FB"],
+                ["13K+", "Followers across IG & FB"],
                 ["100%", "Made in Zambia"],
               ].map(([k, v]) => (
                 <div key={v}>
-                  <dt className="font-display text-3xl font-light text-ink-950" dangerouslySetInnerHTML={{ __html: k }} />
-                  <dd className="mt-2 editorial-eyebrow text-ink-500 leading-tight" dangerouslySetInnerHTML={{ __html: v }} />
+                  <dt className="font-display text-3xl font-light text-ink-950">{k}</dt>
+                  <dd className="mt-2 editorial-eyebrow text-ink-500 leading-tight">{v}</dd>
                 </div>
               ))}
             </dl>

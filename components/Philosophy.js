@@ -3,7 +3,7 @@ import { Scissors, Sparkles, MapPin } from "lucide-react";
 const pillars = [
   {
     title: "Hand-tailored in Lusaka",
-    desc: "Every gown and occasion piece is cut, stitched, and finished in our Woodlands workroom — never sent out, never assembled by line.",
+    desc: "Every gown and occasion piece is cut, stitched, and finished in our Woodlands workroom, never sent out, never assembled by line.",
     icon: Scissors,
   },
   {
@@ -24,12 +24,12 @@ export default function Philosophy() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center max-w-2xl mx-auto">
           <p className="editorial-eyebrow text-wine-700">The House</p>
-          <p className="mt-6 font-display text-3xl sm:text-4xl lg:text-5xl text-ink-950 font-light leading-tight">
+          <h2 className="mt-6 font-display text-3xl sm:text-4xl lg:text-5xl text-ink-950 font-light leading-tight">
             A fashion house. <span className="italic">Not a label.</span>
-          </p>
+          </h2>
           <p className="mt-6 text-ink-700 leading-relaxed">
             Kamba is led by Chikondi Mwanza, founder, CEO, and lead designer.
-            The work is bridal first, occasion-luxe second — and unhurried by design.
+            The work is bridal first, occasion-luxe second, and unhurried by design.
           </p>
         </div>
 
