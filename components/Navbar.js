@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import Logo from "./Logo";
 
 const links = [
@@ -84,11 +84,32 @@ export default function Navbar() {
                   key={l.href}
                   href={l.href}
                   aria-current={active ? "page" : undefined}
-                  className={`py-3 px-2 text-sm font-medium tracking-[0.2em] uppercase border-b border-ivory-200 ${
-                    active ? "text-wine-700" : "text-ink-950"
+                  className={`group relative flex items-center justify-between py-4 pl-5 pr-3 text-sm font-medium tracking-[0.2em] uppercase border-b border-ivory-200 transition-colors duration-300 ${
+                    active
+                      ? "text-wine-700 bg-ivory-100"
+                      : "text-ink-950 hover:text-wine-700 hover:bg-ivory-100"
                   }`}
                 >
-                  {l.label}
+                  {/* vertical accent — held when active, grows in on hover */}
+                  <span
+                    aria-hidden
+                    className={`absolute left-0 top-1/2 -translate-y-1/2 w-[2px] bg-wine-700 transition-all duration-300 ease-out ${
+                      active
+                        ? "h-7 opacity-100"
+                        : "h-0 opacity-0 group-hover:h-7 group-hover:opacity-100"
+                    }`}
+                  />
+                  <span className="transition-transform duration-300 ease-out group-hover:translate-x-1.5">
+                    {l.label}
+                  </span>
+                  <ArrowUpRight
+                    aria-hidden
+                    className={`h-4 w-4 text-wine-700 transition-all duration-300 ease-out ${
+                      active
+                        ? "opacity-100 translate-x-0"
+                        : "opacity-0 -translate-x-1.5 group-hover:opacity-100 group-hover:translate-x-0"
+                    }`}
+                  />
                 </Link>
               );
             })}
