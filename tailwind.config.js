@@ -41,9 +41,21 @@ module.exports = {
           "0%": { opacity: 0, transform: "translateY(8px)" },
           "100%": { opacity: 1, transform: "translateY(0)" },
         },
+        // Menu panel floats down and settles — luxe easing.
+        menuIn: {
+          "0%": { opacity: 0, transform: "translateY(-12px) scale(0.98)" },
+          "100%": { opacity: 1, transform: "translateY(0) scale(1)" },
+        },
+        // Optional perpetual drift (barely-there).
+        floaty: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-4px)" },
+        },
       },
       animation: {
         fadeUp: "fadeUp 600ms ease-out both",
+        menuIn: "menuIn 420ms cubic-bezier(0.16, 1, 0.3, 1) both",
+        floaty: "floaty 6s ease-in-out infinite",
       },
     },
   },

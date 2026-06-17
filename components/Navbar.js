@@ -75,8 +75,8 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div id="mobile-menu" className="lg:hidden border-t border-ivory-200 bg-ivory-50">
-          <div className="px-4 py-6 flex flex-col gap-1">
+        <div id="mobile-menu" className="lg:hidden px-3 pt-2 pb-4 bg-ivory-50/80 backdrop-blur">
+          <div className="rounded-2xl border border-ivory-200 bg-ivory-50 shadow-[0_24px_55px_-26px_rgba(26,20,16,0.45)] px-3 py-4 flex flex-col gap-1 animate-menuIn">
             {links.map((l) => {
               const active = isActive(l.href);
               return (
