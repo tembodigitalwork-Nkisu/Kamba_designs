@@ -75,8 +75,8 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div id="mobile-menu" className="lg:hidden px-3 pt-2 pb-4 bg-ivory-50/80 backdrop-blur">
-          <div className="rounded-2xl border border-ivory-200 bg-ivory-50 shadow-[0_24px_55px_-26px_rgba(26,20,16,0.45)] px-3 py-4 flex flex-col gap-1 animate-menuIn">
+        <div id="mobile-menu" className="lg:hidden px-4 pt-1 pb-4 flex justify-end">
+          <div className="w-[min(20rem,calc(100vw-2rem))] origin-top-right rounded-2xl border border-ivory-200 bg-ivory-50/95 backdrop-blur shadow-[0_24px_55px_-26px_rgba(26,20,16,0.45)] p-2 flex flex-col gap-0.5 animate-menuIn">
             {links.map((l) => {
               const active = isActive(l.href);
               return (
@@ -84,7 +84,7 @@ export default function Navbar() {
                   key={l.href}
                   href={l.href}
                   aria-current={active ? "page" : undefined}
-                  className={`group relative flex items-center justify-between py-4 pl-5 pr-3 text-sm font-medium tracking-[0.2em] uppercase border-b border-ivory-200 transition-colors duration-300 ${
+                  className={`group relative flex items-center justify-between rounded-xl py-3.5 pl-5 pr-3 text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 ${
                     active
                       ? "text-wine-700 bg-ivory-100"
                       : "text-ink-950 hover:text-wine-700 hover:bg-ivory-100"
@@ -93,10 +93,10 @@ export default function Navbar() {
                   {/* vertical accent — held when active, grows in on hover */}
                   <span
                     aria-hidden
-                    className={`absolute left-0 top-1/2 -translate-y-1/2 w-[2px] bg-wine-700 transition-all duration-300 ease-out ${
+                    className={`absolute left-2 top-1/2 -translate-y-1/2 w-[2px] rounded-full bg-wine-700 transition-all duration-300 ease-out ${
                       active
-                        ? "h-7 opacity-100"
-                        : "h-0 opacity-0 group-hover:h-7 group-hover:opacity-100"
+                        ? "h-6 opacity-100"
+                        : "h-0 opacity-0 group-hover:h-6 group-hover:opacity-100"
                     }`}
                   />
                   <span className="transition-transform duration-300 ease-out group-hover:translate-x-1.5">
@@ -115,7 +115,7 @@ export default function Navbar() {
             })}
             <Link
               href="/appointments"
-              className="mt-5 text-center text-xs tracking-[0.25em] uppercase font-medium border border-wine-700 text-wine-700 px-4 py-3 hover:bg-wine-700 hover:text-ivory-50 transition"
+              className="mt-2 mx-1 rounded-xl text-center text-xs tracking-[0.25em] uppercase font-medium border border-wine-700 text-wine-700 px-4 py-3 hover:bg-wine-700 hover:text-ivory-50 transition"
             >
               Book a Fitting
             </Link>
