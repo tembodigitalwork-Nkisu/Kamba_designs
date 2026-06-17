@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { localSrc } from "@/lib/images";
+import Reveal from "@/components/Reveal";
 
 const looks = [
   { name: "Pearl",  silhouette: "Slip · Silk satin",       category: "Bridal",   img: localSrc("bridalPearl") },
@@ -13,7 +14,7 @@ export default function FeaturedLooks() {
   return (
     <section className="relative py-14 sm:py-28 bg-ivory-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-8 sm:mb-12">
+        <Reveal className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-8 sm:mb-12">
           <div>
             <p className="editorial-eyebrow text-wine-700">The Collection</p>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl text-ink-950 font-light leading-[1.05]">
@@ -26,9 +27,9 @@ export default function FeaturedLooks() {
           >
             See full collection <ArrowRight className="h-4 w-4" />
           </Link>
-        </div>
+        </Reveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Reveal selector=".group" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {looks.map((l) => (
             <Link key={l.name} href={`/collection#${l.category.toLowerCase()}`} className="group block">
               <div className="relative aspect-[3/4] overflow-hidden bg-ivory-200">
@@ -49,7 +50,7 @@ export default function FeaturedLooks() {
               </div>
             </Link>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

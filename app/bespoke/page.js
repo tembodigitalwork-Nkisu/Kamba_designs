@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Coffee, Pencil, Scissors, Gift } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
+import Reveal from "@/components/Reveal";
+import Parallax from "@/components/Parallax";
 import { localSrc } from "@/lib/images";
 
 const BESPOKE_IMG = localSrc("bespokeDetail");
@@ -60,18 +62,18 @@ export default function BespokePage() {
   return (
     <main>
       <section className="relative py-16 sm:py-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <Reveal className="mx-auto max-w-6xl px-4 sm:px-6">
           <SectionHeader
             as="h1"
             eyebrow="Bespoke"
             title={<>From a sketch to <span className="italic">your</span> piece, in four steps.</>}
             intro="Every Kamba gown is custom-made for one bride, never rented, never resold. The process is unhurried on purpose: most pieces take three to six months."
           />
-        </div>
+        </Reveal>
       </section>
 
       <section className="relative pb-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 grid lg:grid-cols-2 gap-px bg-ivory-200 border border-ivory-200">
+        <Reveal selector="article" className="mx-auto max-w-6xl px-4 sm:px-6 grid lg:grid-cols-2 gap-px bg-ivory-200 border border-ivory-200">
           {steps.map(({ no, name, duration, blurb, icon: Icon }) => (
             <article key={no} className="bg-ivory-50 p-10 sm:p-12">
               <div className="flex items-start gap-6">
@@ -87,12 +89,12 @@ export default function BespokePage() {
               </div>
             </article>
           ))}
-        </div>
+        </Reveal>
       </section>
 
       <section className="relative py-20 sm:py-28 bg-ivory-100 border-y border-ivory-200">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="grid lg:grid-cols-12 gap-10 items-end mb-10">
+          <Reveal as="div" className="grid lg:grid-cols-12 gap-10 items-end mb-10">
             <div className="lg:col-span-7">
               <p className="editorial-eyebrow text-wine-700">Starting prices</p>
               <h2 className="mt-3 font-display text-4xl sm:text-5xl lg:text-6xl text-ink-950 font-light leading-[1.05]">
@@ -105,9 +107,9 @@ export default function BespokePage() {
               complexity of the design. You'll see the full quote in writing
               before any cloth is cut.
             </p>
-          </div>
+          </Reveal>
 
-          <ul className="bg-ivory-50 border border-ivory-200 divide-y divide-ivory-200">
+          <Reveal as="ul" selector="li" stagger={0.08} className="bg-ivory-50 border border-ivory-200 divide-y divide-ivory-200">
             {startingPrices.map((row) => (
               <li key={row.piece} className="flex items-baseline justify-between gap-6 px-6 sm:px-10 py-5">
                 <span className="font-display text-xl sm:text-2xl text-ink-950">{row.piece}</span>
@@ -116,24 +118,26 @@ export default function BespokePage() {
                 </span>
               </li>
             ))}
-          </ul>
+          </Reveal>
         </div>
       </section>
 
       <section className="relative py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-5">
+          <Reveal className="lg:col-span-5">
             <div className="relative aspect-[4/5]">
-              <Image
-                src={BESPOKE_IMG}
-                alt="Hand-beading detail on silk in the Kamba atelier"
-                fill
-                sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-cover"
-              />
+              <Parallax className="absolute inset-0">
+                <Image
+                  src={BESPOKE_IMG}
+                  alt="Hand-beading detail on silk in the Kamba atelier"
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover"
+                />
+              </Parallax>
             </div>
-          </div>
-          <div className="lg:col-span-7">
+          </Reveal>
+          <Reveal className="lg:col-span-7">
             <p className="editorial-eyebrow text-wine-700">A few notes</p>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl text-ink-950 font-light leading-tight">
               Honest answers <span className="italic">before you ask.</span>
@@ -159,7 +163,7 @@ export default function BespokePage() {
             >
               Begin with a consultation <ArrowUpRight className="h-4 w-4" />
             </Link>
-          </div>
+          </Reveal>
         </div>
       </section>
     </main>

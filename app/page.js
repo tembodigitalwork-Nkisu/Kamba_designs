@@ -4,16 +4,22 @@ import FeaturedLooks from "@/components/FeaturedLooks";
 import BespokeTeaser from "@/components/BespokeTeaser";
 import Testimonial from "@/components/Testimonial";
 import AppointmentsCTA from "@/components/AppointmentsCTA";
+import Reveal from "@/components/Reveal";
 
 export default function HomePage() {
   return (
     <main>
+      {/* Hero stays static — it holds the LCP image, so we don't fade it. */}
       <Hero />
-      <Philosophy />
+
+      <Reveal><Philosophy /></Reveal>
+
+      {/* FeaturedLooks reveals its own header + staggers its cards internally. */}
       <FeaturedLooks />
-      <BespokeTeaser />
-      <Testimonial />
-      <AppointmentsCTA />
+
+      <Reveal><BespokeTeaser /></Reveal>
+      <Reveal><Testimonial /></Reveal>
+      <Reveal><AppointmentsCTA /></Reveal>
     </main>
   );
 }

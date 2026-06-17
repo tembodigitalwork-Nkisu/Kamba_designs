@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
+import Reveal from "@/components/Reveal";
 import { localSrc } from "@/lib/images";
 
 export const metadata = {
@@ -47,7 +48,7 @@ export default function CollectionPage() {
       <LookGrid id="occasion" eyebrow="Occasion Luxe" title={<>For the <span className="italic">days around it.</span></>} looks={occasionLooks} />
 
       <section className="relative py-20 bg-ivory-100">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
+        <Reveal className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
           <p className="font-display text-3xl sm:text-4xl text-ink-950 font-light leading-snug">
             None of these the right one?<br />
             <span className="italic">Begin a bespoke commission.</span>
@@ -58,7 +59,7 @@ export default function CollectionPage() {
           >
             Start your design <ArrowUpRight className="h-4 w-4" />
           </Link>
-        </div>
+        </Reveal>
       </section>
     </main>
   );
@@ -76,7 +77,7 @@ function LookGrid({ id, eyebrow, title, looks }) {
           <p className="text-sm text-ink-500 italic">All pieces made to measure · Lusaka</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
+        <Reveal selector=".group" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
           {looks.map((l, i) => (
             <article key={l.name} className="group">
               <div className="relative aspect-[3/4] overflow-hidden bg-ivory-100">
@@ -100,7 +101,7 @@ function LookGrid({ id, eyebrow, title, looks }) {
               </div>
             </article>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

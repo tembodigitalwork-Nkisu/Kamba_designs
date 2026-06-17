@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Award } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
+import Reveal from "@/components/Reveal";
+import Parallax from "@/components/Parallax";
 import { localSrc } from "@/lib/images";
 
 const FOUNDER_IMG = localSrc("founder");
@@ -21,31 +23,33 @@ export default function AboutPage() {
   return (
     <main>
       <section className="relative py-16 sm:py-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <Reveal className="mx-auto max-w-6xl px-4 sm:px-6">
           <SectionHeader
             as="h1"
             eyebrow="The House"
             title={<>Bridal &amp; occasion luxe, <span className="italic">made in Lusaka.</span></>}
             intro="Kamba Fashion Designs is a small fashion house in Woodlands, Lusaka, led by founder, CEO and lead designer Chikondi Mwanza. We design and tailor bridal gowns, bridal-shower outfits, kitenge formal pieces, and occasion looks for clients across Zambia and beyond."
           />
-        </div>
+        </Reveal>
       </section>
 
       <section className="relative pb-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-start">
-          <div className="lg:col-span-5">
+          <Reveal className="lg:col-span-5">
             <div className="relative aspect-[4/5]">
-              <Image
-                src={FOUNDER_IMG}
-                alt="Chikondi Mwanza, founder and lead designer, in the Kamba atelier"
-                fill
-                sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-cover"
-              />
+              <Parallax className="absolute inset-0">
+                <Image
+                  src={FOUNDER_IMG}
+                  alt="Chikondi Mwanza, founder and lead designer, in the Kamba atelier"
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover"
+                />
+              </Parallax>
             </div>
             <p className="mt-4 editorial-eyebrow text-ink-500">Chikondi Mwanza, founder &amp; lead designer.</p>
-          </div>
-          <div className="lg:col-span-7 space-y-6 text-ink-700 leading-relaxed">
+          </Reveal>
+          <Reveal as="div" className="lg:col-span-7 space-y-6 text-ink-700 leading-relaxed">
             <p className="text-lg">
               Kamba grew out of a tailoring practice that began with a single bridal commission and
               never quite stopped. The brand is led by Chikondi Mwanza, who acts as both CEO and lead
@@ -76,7 +80,7 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -94,7 +98,7 @@ export default function AboutPage() {
               The current work speaks for itself on Instagram.
             </p>
           </div>
-          <ul className="grid sm:grid-cols-2 gap-px bg-ivory-200 border border-ivory-200">
+          <Reveal as="ul" selector="li" className="grid sm:grid-cols-2 gap-px bg-ivory-200 border border-ivory-200">
             {awards.map((a) => (
               <li key={a.body} className="bg-ivory-50 p-8 flex items-start gap-5">
                 <span className="grid place-items-center h-12 w-12 rounded-full border border-wine-700/30 shrink-0">
@@ -107,12 +111,12 @@ export default function AboutPage() {
                 </div>
               </li>
             ))}
-          </ul>
+          </Reveal>
         </div>
       </section>
 
       <section className="relative py-20 sm:py-28 bg-ink-950 text-ivory-50">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
+        <Reveal className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
           <p className="font-display text-3xl sm:text-4xl lg:text-5xl font-light leading-snug">
             "We don't sell off the rack. <br />
             <span className="italic">We tailor for the person, the day, the photograph that survives it."</span>
@@ -125,7 +129,7 @@ export default function AboutPage() {
           >
             Book a consultation
           </Link>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

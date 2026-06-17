@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { localSrc } from "@/lib/images";
+import Parallax from "@/components/Parallax";
 
 const HERO_IMAGE = localSrc("hero");
 
@@ -55,14 +56,16 @@ export default function Hero() {
             <div className="relative aspect-[4/5] sm:aspect-[5/6] lg:aspect-[4/5]">
               <div className="absolute -bottom-4 -right-4 w-2/3 h-2/3 bg-ivory-100 -z-10" aria-hidden="true" />
               <div className="absolute -top-4 -left-4 w-1/3 h-1/3 bg-wine-100 -z-10" aria-hidden="true" />
-              <Image
-                src={HERO_IMAGE}
-                alt=""
-                fill
-                priority
-                sizes="(min-width: 1024px) 60vw, 100vw"
-                className="object-cover"
-              />
+              <Parallax className="absolute inset-0" amount={10}>
+                <Image
+                  src={HERO_IMAGE}
+                  alt=""
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 60vw, 100vw"
+                  className="object-cover"
+                />
+              </Parallax>
               <span className="absolute bottom-4 left-4 bg-ivory-50/90 backdrop-blur px-3 py-1.5 text-[10px] tracking-[0.3em] uppercase">
                 Lusaka · 2026 Edit
               </span>
