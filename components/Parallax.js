@@ -49,7 +49,7 @@ export default function Parallax({ children, className = "", amount = 12 }) {
   );
 
   return (
-    <div ref={scope} className={`relative overflow-hidden ${className}`}>
+    <div ref={scope} className={`overflow-hidden ${className}`}>
       {/* Oversized layer: 140% tall, centred, so ±12% drift stays covered. */}
       <div
         ref={inner}
