@@ -40,7 +40,7 @@ export default function AboutPage() {
               <Parallax className="absolute inset-0">
                 <Image
                   src={FOUNDER_IMG}
-                  alt="Chikondi Mwanza, founder and lead designer, in the Kamba atelier"
+                  alt="A wedding gown on a dress form inside the Kamba atelier in Woodlands, Lusaka"
                   fill
                   sizes="(min-width: 1024px) 40vw, 100vw"
                   className="object-cover"
