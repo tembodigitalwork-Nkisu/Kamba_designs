@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
 
 const links = [
@@ -16,6 +16,7 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -28,13 +29,31 @@ export default function Navbar() {
 
   useEffect(() => { setOpen(false); }, [pathname]);
 
+  // Shrink the logo into the corner once the page is scrolled.
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll(); // set correctly if the page loads already scrolled
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const isActive = (href) =>
     pathname === href || pathname.startsWith(href + "/");
 
   return (
     <header className="sticky top-0 z-40 bg-ivory-50/85 backdrop-blur border-b border-ivory-200">
-      <nav className="mx-auto max-w-6xl px-4 sm:px-6 h-20 flex items-center justify-between">
-        <Logo size="sm" />
+      <nav
+        className={`mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between transition-[height] duration-300 ease-out ${
+          scrolled ? "h-16 sm:h-20" : "h-24 sm:h-28"
+        }`}
+      >
+        <div
+          className={`origin-left transition-transform duration-300 ease-out ${
+            scrolled ? "scale-[0.7]" : "scale-100"
+          }`}
+        >
+          <Logo size="lg" />
+        </div>
 
         <div className="hidden lg:flex items-center gap-9">
           {links.map((l) => {
@@ -44,14 +63,18 @@ export default function Navbar() {
                 key={l.href}
                 href={l.href}
                 aria-current={active ? "page" : undefined}
-                className={`text-xs font-medium tracking-[0.25em] uppercase transition relative ${
+                className={`group relative text-xs font-medium tracking-[0.25em] uppercase transition-colors ${
                   active ? "text-wine-700" : "text-ink-700 hover:text-ink-950"
                 }`}
               >
                 {l.label}
-                {active && (
-                  <span aria-hidden className="absolute -bottom-2 left-0 right-0 h-px bg-wine-700" />
-                )}
+                {/* one underline for both states: grows on hover, held when active */}
+                <span
+                  aria-hidden
+                  className={`absolute -bottom-2 left-0 right-0 h-px origin-left bg-wine-700 transition-transform duration-300 ease-out ${
+                    active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                  }`}
+                />
               </Link>
             );
           })}
@@ -84,30 +107,16 @@ export default function Navbar() {
                   key={l.href}
                   href={l.href}
                   aria-current={active ? "page" : undefined}
-                  className={`group relative flex items-center justify-between rounded-xl py-3.5 pl-5 pr-3 text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 ${
-                    active
-                      ? "text-wine-700 bg-ivory-100"
-                      : "text-ink-950 hover:text-wine-700 hover:bg-ivory-100"
+                  className={`group relative w-fit py-2.5 px-2 text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 ${
+                    active ? "text-wine-700" : "text-ink-950 hover:text-wine-700"
                   }`}
                 >
-                  {/* vertical accent — held when active, grows in on hover */}
+                  {l.label}
+                  {/* one underline for both states: grows on hover, held when active */}
                   <span
                     aria-hidden
-                    className={`absolute left-2 top-1/2 -translate-y-1/2 w-[2px] rounded-full bg-wine-700 transition-all duration-300 ease-out ${
-                      active
-                        ? "h-6 opacity-100"
-                        : "h-0 opacity-0 group-hover:h-6 group-hover:opacity-100"
-                    }`}
-                  />
-                  <span className="transition-transform duration-300 ease-out group-hover:translate-x-1.5">
-                    {l.label}
-                  </span>
-                  <ArrowUpRight
-                    aria-hidden
-                    className={`h-4 w-4 text-wine-700 transition-all duration-300 ease-out ${
-                      active
-                        ? "opacity-100 translate-x-0"
-                        : "opacity-0 -translate-x-1.5 group-hover:opacity-100 group-hover:translate-x-0"
+                    className={`absolute bottom-1 left-2 right-2 h-px origin-left bg-wine-700 transition-transform duration-300 ease-out ${
+                      active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                     }`}
                   />
                 </Link>
