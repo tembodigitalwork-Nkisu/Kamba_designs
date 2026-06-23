@@ -34,6 +34,17 @@ export const metadata = {
     "fashion designer Woodlands",
     "occasion wear Lusaka",
   ],
+  authors: [{ name: "Kamba Fashion Designs" }],
+  creator: "Kamba Fashion Designs",
+  publisher: "Kamba Fashion Designs",
+  // Canonical for the homepage. Resolved against metadataBase above; each
+  // sub-page sets its own alternates.canonical relative to "/".
+  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   openGraph: {
     title: "Kamba Fashion Designs | Bridal & Occasion Luxe",
     description: "Hand-tailored bridal gowns and occasion looks, made in Lusaka. Led by Chikondi Mwanza.",
@@ -88,6 +99,13 @@ function BusinessSchema() {
       addressRegion: "Lusaka Province",
       addressCountry: "ZM",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -15.3875,
+      longitude: 28.3228,
+    },
+    openingHours: "Mo-Sa 09:00-17:00",
+    priceRange: "$$",
     founder: { "@type": "Person", name: "Chikondi Mwanza" },
     sameAs: [
       "https://instagram.com/kamba_bridal",

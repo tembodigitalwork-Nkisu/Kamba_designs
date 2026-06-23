@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { localSrc } from "@/lib/images";
+import { localSrc, localAlt } from "@/lib/images";
 import Parallax from "@/components/Parallax";
 
 const HERO_IMAGE = localSrc("hero");
+const HERO_ALT = localAlt("hero");
 
 export default function Hero() {
   return (
@@ -59,7 +60,7 @@ export default function Hero() {
               <Parallax className="absolute inset-0" amount={10}>
                 <Image
                   src={HERO_IMAGE}
-                  alt=""
+                  alt={HERO_ALT}
                   fill
                   priority
                   sizes="(min-width: 1024px) 60vw, 100vw"

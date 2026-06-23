@@ -12,6 +12,7 @@ export const metadata = {
   title: "About / The House",
   description:
     "Kamba Fashion Designs is a Lusaka-based fashion house led by Chikondi Mwanza. Bridal and occasion luxe, hand-tailored in Woodlands.",
+  alternates: { canonical: "/about" },
 };
 
 const awards = [

@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Kamba monogram: the brand's framed "K" mark — a portrait frame with a
+       stylised K (detached accent tick + open arms). Ink on cream, drawn to
+       match the real brand kit so the favicon is the actual logo, not a letter. -->
   <rect width="32" height="32" fill="#fbf7f0" />
-  <text
-    x="16"
-    y="17"
-    font-family="Georgia, 'Times New Roman', serif"
-    font-size="22"
-    font-weight="700"
-    fill="#9c2d3b"
-    text-anchor="middle"
-    dominant-baseline="central"
-  >K</text>
+  <rect x="8.25" y="3.5" width="15.5" height="25" fill="none" stroke="#1a1410" stroke-width="1.2" />
+  <g fill="none" stroke="#1a1410" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter">
+    <!-- accent tick -->
+    <line x1="14.4" y1="8.5" x2="14.4" y2="13" />
+    <!-- open arms of the K -->
+    <polyline points="18.2,9 13.1,16.4 18.6,24" />
+  </g>
 </svg>

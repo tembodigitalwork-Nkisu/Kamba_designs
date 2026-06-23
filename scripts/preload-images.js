@@ -54,9 +54,15 @@ const MANIFEST = [
     prompt: `macro close-up of intricate hand-beading and lace detail on white wedding gown silk fabric, no person, no hands, warm natural light, ${STYLE}` },
   { file: "founder.jpg",         w: 1200, h: 1500, seed: 71,
     prompt: `interior of a luxury bridal atelier studio, an ivory wedding gown on a dress form beside fabric bolts, spools of thread, paper sketches and a sewing table, warm natural window light, Lusaka, no person, editorial interior still life, ${STYLE}` },
+  // Social-share cover (Open Graph / Twitter). Landscape 1200x630 — the
+  // ratio Facebook, WhatsApp & X expect. Lands at public/og.jpg (site
+  // root), matching the og:image / twitter:image path in app/layout.js.
+  { file: "og.jpg",              w: 1200, h: 630,  seed: 91, root: true,
+    prompt: `a flowing ivory silk wedding gown with hand-stitched lace detailing alongside a vibrant chitenge formal dress, luxury bridal boutique, wide landscape composition with negative space, ${STYLE}` },
 ];
 
 const OUT = path.join(__dirname, "..", "public", "looks");
+const PUBLIC = path.join(__dirname, "..", "public");
 
 function urlFor(m) {
   return `https://image.pollinations.ai/prompt/${encodeURIComponent(m.prompt)}?width=${m.w}&height=${m.h}&seed=${m.seed}&nologo=true&model=${HD_MODEL}`;
@@ -67,7 +73,7 @@ async function exists(p) {
 }
 
 async function fetchOne(m) {
-  const dst = path.join(OUT, m.file);
+  const dst = path.join(m.root ? PUBLIC : OUT, m.file);
   if (await exists(dst)) {
     console.log(`  · skip   ${m.file}  (already cached — delete to re-fetch)`);
     return;

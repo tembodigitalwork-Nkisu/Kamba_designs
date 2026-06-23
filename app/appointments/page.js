@@ -6,6 +6,7 @@ export const metadata = {
   title: "Appointments",
   description:
     "Book a private consultation at Kamba Fashion Designs. K300 secures the slot, waived if you commit to a piece on the day. By appointment in Woodlands, Lusaka.",
+  alternates: { canonical: "/appointments" },
 };
 
 const what = [
@@ -33,6 +34,9 @@ export default function AppointmentsPage() {
             title={<>Begin with a <span className="italic">conversation.</span></>}
             intro="Tell us a little about you, the day, and the piece in your head. We'll come back within 24 hours with two or three times that suit."
           />
+          <p className="mt-8 font-display text-2xl sm:text-3xl italic text-wine-700 font-light leading-snug">
+            We can't wait to see you, and we have bridal packages waiting.
+          </p>
         </div>
       </section>
 

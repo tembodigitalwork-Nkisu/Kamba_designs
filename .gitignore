@@ -5,3 +5,6 @@ out
 .DS_Store
 *.log
 .vercel
+
+# Office temp/lock files
+~$*

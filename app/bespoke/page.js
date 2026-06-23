@@ -12,6 +12,7 @@ export const metadata = {
   title: "Bespoke",
   description:
     "How a bespoke Kamba piece is made, from first conversation to final stitch. Bridal gowns and occasion looks, hand-tailored in Lusaka. Starting prices from K1,500.",
+  alternates: { canonical: "/bespoke" },
 };
 
 const steps = [

@@ -12,6 +12,10 @@ export default function AppointmentsCTA() {
             <h2 className="mt-6 font-display text-3xl sm:text-5xl font-light leading-tight">
               Begin with a conversation.
             </h2>
+            <p className="mt-6 max-w-lg font-display text-xl sm:text-2xl italic text-gold-300 font-light leading-snug">
+              Imagine slipping into your custom-made gown, feeling like a
+              dream. Let's make it happen.
+            </p>
             <p className="mt-5 max-w-lg text-ivory-100/80 leading-relaxed">
               First fittings are 90 minutes, by appointment, and on the house.
               We don't sell from a shop floor. We make to measure, on your timeline.

@@ -9,6 +9,7 @@ export const metadata = {
   title: "Collection",
   description:
     "Bridal gowns and occasion looks from Kamba Fashion Designs. Hand-tailored in Woodlands, Lusaka. Each piece made to measure.",
+  alternates: { canonical: "/collection" },
 };
 
 const bridalLooks = [
@@ -38,10 +39,13 @@ export default function CollectionPage() {
             title={<>Bridal &amp; <span className="italic">occasion luxe.</span></>}
             intro="Two lines, one workroom. Bridal, for the day. Occasion, for everything around it. Pricing on request, every piece is made to your measurements."
           />
+          <p className="mt-8 font-display text-2xl sm:text-3xl italic text-wine-700 font-light leading-snug">
+            Designed to capture the essence of elegance.
+          </p>
         </div>
       </section>
 
-      <LookGrid id="bridal" eyebrow="Bridal" title={<>For the day <span className="italic">you say yes.</span></>} looks={bridalLooks} />
+      <LookGrid id="bridal" eyebrow="Bridal" title={<>For the day <span className="italic">you say yes.</span></>} looks={bridalLooks} note={<>Every &ldquo;forever after&rdquo; begins with a perfect dress</>} />
 
       <div className="border-t border-ivory-200" />
 
@@ -49,6 +53,7 @@ export default function CollectionPage() {
 
       <section className="relative py-20 bg-ivory-100">
         <Reveal className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
+          <p className="editorial-eyebrow text-wine-700 mb-5">A masterpiece, created to perfection</p>
           <p className="font-display text-3xl sm:text-4xl text-ink-950 font-light leading-snug">
             None of these the right one?<br />
             <span className="italic">Begin a bespoke commission.</span>
@@ -65,7 +70,7 @@ export default function CollectionPage() {
   );
 }
 
-function LookGrid({ id, eyebrow, title, looks }) {
+function LookGrid({ id, eyebrow, title, looks, note = "All pieces made to measure · Lusaka" }) {
   return (
     <section id={id} className="relative py-16 sm:py-20 scroll-mt-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -74,7 +79,7 @@ function LookGrid({ id, eyebrow, title, looks }) {
             <p className="editorial-eyebrow text-wine-700">{eyebrow}</p>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl text-ink-950 font-light leading-tight">{title}</h2>
           </div>
-          <p className="text-sm text-ink-500 italic">All pieces made to measure · Lusaka</p>
+          <p className="text-sm text-ink-500 italic">{note}</p>
         </div>
 
         <Reveal selector=".group" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">

@@ -7,6 +7,7 @@ export const metadata = {
   title: "Contact / Find Us",
   description:
     "Visit Kamba Fashion Designs in Woodlands, Lusaka, by appointment. WhatsApp +260 97 203 5672. Instagram @kamba_bridal & @kamba_designs. Facebook /KambaDesigns.",
+  alternates: { canonical: "/contact" },
 };
 
 const channels = [
